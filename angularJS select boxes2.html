@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <div ng-app="a" ng-controller="b">
+        <p>Select a car:</p>
+        <select ng-model="selectedcars">
+            <option ng-repeat="x in cars" ng-value="{{x}}">{{x.model}}</option>
+        </select>
+        <h1>You selected a {{selectedcars.color}} {{selectedcars.model}}</h1>
+    </div>
+
+    <script>
+        var app = angular.module('a', []);
+        app.controller('b', function($scope) {
+            $scope.cars = [
+                {model : "Ford Mustang", color : "red"},
+                {model : "Fiat 500", color : "white"},
+                {model : "Volvo XC90", color : "black"}
+            ];
+        });
+    </script>
+    
+</body>
+</html>
