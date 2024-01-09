@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+      transition: all linear 0.5s;
+      background-color: lightblue;
+      height: 100px;
+    }
+    
+    .ng-hide {
+      height: 0;
+    }
+    
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+<body ng-app="ab">
+    <h1>Hide the DIV: <input type="checkbox" ng-model="cd"></h1>
+    <div ng-hide="cd"></div>
+
+    <script>
+        var app = angular.module('ab',['ngAnimate']);
+    </script>
+    
+</body>
+</html>
